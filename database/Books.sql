@@ -27,6 +27,7 @@ CREATE TABLE books_reader (
 	book_read boolean,
 	book_wtr boolean,
 	book_dnf boolean,
+	book_owned boolean NOT NULL,
 	CONSTRAINT PK_books_reader_id PRIMARY KEY (books_reader_id),
 	CONSTRAINT FK_books_reader_reader_id FOREIGN KEY (reader_id) REFERENCES reader(reader_id),
 	CONSTRAINT FK_books_reader_book_id FOREIGN KEY (book_id) REFERENCES books(book_id)
@@ -64,23 +65,23 @@ INSERT INTO books(title, genre) VALUES
 ('Normal People', 'Romance'),
 ('It Ends with Us', 'Romance');
 
-INSERT INTO books_reader(reader_id, book_id, book_read) VALUES
-(1, 1, TRUE),
-(1, 2, TRUE),
-(1, 3, TRUE),
-(1, 4, TRUE),
-(1, 5, TRUE),
-(1, 6, TRUE),
-(1, 7, TRUE),
-(1, 8, TRUE),
-(1, 9, TRUE),
-(1, 14, TRUE);
+INSERT INTO books_reader(reader_id, book_id, book_read, book_owned) VALUES
+(1, 1, TRUE, TRUE),
+(1, 2, TRUE, TRUE),
+(1, 3, TRUE, TRUE),
+(1, 4, TRUE, TRUE),
+(1, 5, TRUE, TRUE),
+(1, 6, TRUE, TRUE),
+(1, 7, TRUE, TRUE),
+(1, 8, TRUE, TRUE),
+(1, 9, TRUE, TRUE),
+(1, 14, TRUE, TRUE);
 
-INSERT INTO books_reader(reader_id, book_id, book_wtr) VALUES
-(1, 10, TRUE),
-(1, 11, TRUE),
-(1, 12, TRUE),
-(1, 13, TRUE);
+INSERT INTO books_reader(reader_id, book_id, book_wtr, book_owned) VALUES
+(1, 10, TRUE, TRUE),
+(1, 11, TRUE, TRUE),
+(1, 12, TRUE, TRUE),
+(1, 13, TRUE, TRUE);
 
 INSERT INTO books_ratings (reader_id, book_id, rating, isLoved) VALUES
 (1, 1, 5, TRUE),
