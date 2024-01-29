@@ -76,11 +76,11 @@ INSERT INTO books_reader(reader_id, book_id, book_read) VALUES
 (1, 9, TRUE),
 (1, 14, TRUE);
 
-INSERT INTO books_reader(reader_id, book_id, book_read, book_wtr) VALUES
-(1, 10, FALSE, TRUE),
-(1, 11, FALSE, TRUE),
-(1, 12, FALSE, TRUE),
-(1, 13, FALSE, TRUE);
+INSERT INTO books_reader(reader_id, book_id, book_wtr) VALUES
+(1, 10, TRUE),
+(1, 11, TRUE),
+(1, 12, TRUE),
+(1, 13, TRUE);
 
 INSERT INTO books_ratings (reader_id, book_id, rating, isLoved) VALUES
 (1, 1, 5, TRUE),
