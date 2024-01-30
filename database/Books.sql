@@ -90,4 +90,18 @@ INSERT INTO books_ratings (reader_id, book_id, rating, isLoved) VALUES
 (1, 5, 5, TRUE);
 
 INSERT INTO books_ratings (reader_id, book_id, rating, isHated) VALUES
-(1, 14, 5, TRUE);
+(1, 14, 0, TRUE);
+
+/*
+sql string returns books that the reader rated 5 stars:
+select title FROM books
+JOIN books_ratings ON books.book_id = books_ratings.book_id
+JOIN books_reader ON books.book_id = books_reader.book_id
+JOIN reader ON books_reader.reader_id = reader.reader_id
+WHERE rating = 5 and reader.reader_id = 1;
+
+sql string returns number of books the reader owns:
+SELECT reader.name, COUNT(book_owned) AS number_of_books_owned FROM books_reader
+JOIN reader ON books_reader.reader_id = reader.reader_id
+GROUP BY reader.name; 
+*/
