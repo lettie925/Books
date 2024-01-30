@@ -38,6 +38,7 @@ CREATE TABLE books_ratings (
 	reader_id INT NOT NULL,
 	book_id INT NOT NULL,
 	rating INT NOT NULL,
+	review varchar (128),
 	isLoved boolean,
 	isHated boolean,
 	CONSTRAINT PK_books_ratings_id PRIMARY KEY (books_ratings_id),
@@ -86,12 +87,13 @@ INSERT INTO books_reader(reader_id, book_id, book_wtr, book_owned) VALUES
 INSERT INTO books_ratings (reader_id, book_id, rating, isLoved) VALUES
 (1, 1, 5, TRUE),
 (1, 2, 5, TRUE),
-(1, 4, 5, TRUE),
 (1, 5, 5, TRUE);
 
-INSERT INTO books_ratings (reader_id, book_id, rating, isHated) VALUES
-(1, 14, 0, TRUE);
+INSERT INTO books_ratings (reader_id, book_id, rating, review, isLoved) VALUES
+(1, 4, 5, 'favorite book ever. rhysand <3', TRUE);
 
+INSERT INTO books_ratings (reader_id, book_id, rating, review, isHated) VALUES
+(1, 14, 0, 'awful book', TRUE);
 /*
 sql string returns books that the reader rated 5 stars:
 select title FROM books
