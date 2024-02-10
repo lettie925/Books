@@ -1,1 +1,0 @@
-The database folder contains the DDL script
