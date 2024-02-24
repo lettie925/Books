@@ -20,6 +20,12 @@ public class Reader {
         this.favorite_genre = favorite_genre;
     }
 
+    public Reader(int reader_id, String name, String favorite_genre) {
+        this.reader_id = reader_id;
+        this.name = name;
+        this.favorite_genre = favorite_genre;
+    }
+
     // getters and setters
     public int getReader_id() {
         return reader_id;

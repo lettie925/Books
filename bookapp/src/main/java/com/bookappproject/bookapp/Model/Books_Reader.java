@@ -7,25 +7,15 @@ public class Books_Reader {
     private boolean book_owned;
 
     // constructors
-    public Books_Reader(int reader_id, int book_id, boolean book_owned, boolean book_read) {
+
+
+    public Books_Reader(int reader_id, int book_id, boolean book_read, boolean book_wtr, boolean book_dnf, boolean book_owned) {
         this.reader_id = reader_id;
         this.book_id = book_id;
-        this.book_owned = book_owned;
         this.book_read = book_read;
-    }
-
-    public Books_Reader(int reader_id, int book_id, boolean book_owned, boolean book_wtr {
-        this.reader_id = reader_id;
-        this.book_id = book_id;
-        this.book_owned = book_owned;
         this.book_wtr = book_wtr;
-    }
-
-    public Books_Reader(int reader_id, int book_id, boolean book_owned, boolean book_dnf) {
-        this.reader_id = reader_id;
-        this.book_id = book_id;
-        this.book_owned = book_owned;
         this.book_dnf = book_dnf;
+        this.book_owned = book_owned;
     }
 
     public Books_Reader(int reader_id, int book_id, boolean book_owned) {
