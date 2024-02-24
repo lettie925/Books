@@ -5,6 +5,7 @@ public class Books {
     private String genre;
 
 
+    // constructors
     public Books(int book_id, String title) {
         this.book_id = book_id;
         this.title = title;
@@ -16,6 +17,8 @@ public class Books {
         this.description = description;
         this.genre = genre;
     }
+
+    // getters and setters
 
     public int getBook_id() {
         return book_id;

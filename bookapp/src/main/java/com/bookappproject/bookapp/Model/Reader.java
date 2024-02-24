@@ -5,6 +5,7 @@ public class Reader {
     private String favorite_book;
     private String favorite_genre;
 
+    // constructors
     public Reader(int reader_id, String name, int age) {
         this.reader_id = reader_id;
         this.name = name;
@@ -19,6 +20,7 @@ public class Reader {
         this.favorite_genre = favorite_genre;
     }
 
+    // getters and setters
     public int getReader_id() {
         return reader_id;
     }
