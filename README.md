@@ -1,7 +1,7 @@
 Hello! This is my Book Manager App project! ♡
 
 - I love reading and wanted to create a side project that I would personally use.
-- It is a great way to keep track of books you've read, liked, hated, reviews you've left on books, etc!
+- It is a great way to keep track of books you want to read, books you've read, liked, hated, reviews you've left on books, etc!
 - I learned how to create my own full stack project
 
 ## Step-by-step installation guide

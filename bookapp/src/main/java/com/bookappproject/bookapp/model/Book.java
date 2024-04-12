@@ -1,6 +1,6 @@
 package com.bookappproject.bookapp.model;
 
-public class Books {
+public class Book {
     private int book_id;
     private String title;
     private String description;
@@ -8,16 +8,19 @@ public class Books {
 
 
     // constructors
-    public Books(int book_id, String title) {
+    public Book(int book_id, String title) {
         this.book_id = book_id;
         this.title = title;
     }
 
-    public Books(int book_id, String title, String description, String genre) {
+    public Book(int book_id, String title, String description, String genre) {
         this.book_id = book_id;
         this.title = title;
         this.description = description;
         this.genre = genre;
+    }
+
+    public Book() {
     }
 
     // getters and setters
