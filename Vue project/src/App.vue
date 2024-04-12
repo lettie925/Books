@@ -1,7 +1,6 @@
 <template>
     <div id="book-manager-app">
     <header>
-        hello!
     </header>
     <nav></nav>
     <main>
@@ -23,9 +22,18 @@
                         "nav"
                         "main"
                         "footer";
+    /* background-color: rgb(216, 206, 243); */
+    
 }
 
 main {
     grid-area: main;
+    position: fixed;
+    inset: 0px;
+    width: 12rem;
+    height:40rem;
+    max-width: 100vw;
+    max-height: 100dvh;
+    margin: auto;
 }
 </style>

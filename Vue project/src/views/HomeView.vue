@@ -1,12 +1,13 @@
 <template>
     <div id = "home">
-        <div id="heading-line">
+        <div id="welcome-msg">
             <h1>
-                Welcome to my book manager app ♡
+                Welcome! ♡
             </h1>
+            <img src="/img/totoro-umbrella.jpg" />
         </div>
         <div id="reader-selection">
-            Select a reader:
+            <div id="select-reader-text"> Select a reader: </div>
                 <reader-list v-bind:readerList="readerList" />
         </div>
     </div>
@@ -39,5 +40,16 @@ created() {
 </script>
 
 <style>
+#welcome-msg>img {
+    width: 250px;
+}
 
+#welcome-msg>h1 {
+    text-align: center;
+    margin-left: 75px;
+}
+
+#select-reader-text {
+    margin-left: 75px;
+}
 </style>
