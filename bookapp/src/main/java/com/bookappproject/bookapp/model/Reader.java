@@ -1,3 +1,5 @@
+package com.bookappproject.bookapp.model;
+
 public class Reader {
     private int reader_id;
     private String name;
@@ -24,6 +26,9 @@ public class Reader {
         this.reader_id = reader_id;
         this.name = name;
         this.favorite_genre = favorite_genre;
+    }
+
+    public Reader() {
     }
 
     // getters and setters

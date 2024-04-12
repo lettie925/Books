@@ -1,3 +1,5 @@
+
+
 DROP TABLE IF EXISTS books_ratings;
 DROP TABLE IF EXISTS books_reader;
 DROP TABLE IF EXISTS books;
@@ -47,11 +49,12 @@ CREATE TABLE books_ratings (
 );
 
 
-INSERT INTO reader(name, age, favorite_book, favorite_genre) 
-VALUES ('Lettie', 27, 'A Court of Mist and Fury', 'Fantasy');
+INSERT INTO reader(name, age, favorite_book, favorite_genre)
+VALUES ('Lettie', 27, 'A Court of Mist and Fury', 'Fantasy'),
+('Vanessa', 28, 'Crescent City', 'Romance');
 
 INSERT INTO books(title, genre) VALUES
-('The Seven Husbands of Evelyn Hugo', 'Romance, Historical Fiction, Psychological Fiction'), 
+('The Seven Husbands of Evelyn Hugo', 'Romance, Historical Fiction, Psychological Fiction'),
 ('Love Hypothesis', 'Romance, Contemporary Romance'),
 ('A Court of Thorns and Roses', 'Fantasy'),
 ('A Court of Mist and Fury', 'Fantasy'),
@@ -105,5 +108,5 @@ WHERE rating = 5 and reader.reader_id = 1;
 sql string returns number of books the reader owns:
 SELECT reader.name, COUNT(book_owned) AS number_of_books_owned FROM books_reader
 JOIN reader ON books_reader.reader_id = reader.reader_id
-GROUP BY reader.name; 
+GROUP BY reader.name;
 */

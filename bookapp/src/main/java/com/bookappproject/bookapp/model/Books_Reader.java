@@ -1,3 +1,5 @@
+package com.bookappproject.bookapp.model;
+
 public class Books_Reader {
     private int reader_id;
     private int book_id;
