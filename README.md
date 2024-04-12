@@ -1,4 +1,4 @@
-Hello! This is my Book Manager App project! ♡
+Hello! This is my Book Manager project! ♡
 
 - I love reading and wanted to create a side project that I would personally use.
 - It is a great way to keep track of books you want to read, books you've read, liked, hated, reviews you've left on books, etc!
@@ -11,7 +11,7 @@ Prerequisites:
 3. Node.js and npm installed.
 
 Step 1: Setting up the PostgreSQL Database:
-1. Install PostgreSQL on your system if you haven't already. You can 2. download it from the official website: PostgreSQL Downloads.
+1. Install PostgreSQL on your system if you haven't already. You can download it from the official website: PostgreSQL Downloads.
 2. Once installed, start the PostgreSQL service.
 3. Open pgAdmin or any PostgreSQL client you prefer.
 4. Create a new database named 'Books'.
