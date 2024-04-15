@@ -1,8 +1,10 @@
 <template>
     <div id="readers-list">
-        <div id="readers" v-for="reader of readerList" v-bind:key="reader.readerId" v-bind:reader="reader">
-        <img src="img/totoro.jpg" />
-        <div id="reader-name"> {{ reader.name }} </div>
+        <div id="readers" v-for="reader of readerList" v-bind:key="reader.readerId" v-bind:reader="reader" v-on:click="routeToReadersProfile(reader.reader_id)" >
+            
+            <img src="img/totoro.jpg"  />
+            <div id="reader-name"> {{ reader.name }} </div>
+            
         </div>
     
     </div>
@@ -10,7 +12,13 @@
 
 <script>
 export default {
-    props: ['readerList']
+    props: ['readerList'],
+
+    methods: {
+        routeToReadersProfile(id) {
+            this.$router.push({ name: "readerProfile", params: { readerId: id}});
+        }
+    }
     
 }
 </script>

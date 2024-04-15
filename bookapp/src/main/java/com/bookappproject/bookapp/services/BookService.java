@@ -25,7 +25,7 @@ public class BookService {
         // Creates empty list for the readers books
         List <Book> bookList = new ArrayList<>();
 
-
+        // Creates a list of Books by creating the Book with the bookId
         for (Books_Reader booksReader : bookReaderList) {
             Book book = booksDao.getBookByBookId(booksReader.getBook_id());
             bookList.add(book);
