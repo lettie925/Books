@@ -56,7 +56,7 @@ public class JdbcBooksDao implements BooksDao{
         book.setBook_id(results.getInt("book_id"));
         book.setTitle(results.getString("title"));
         book.setDescription(results.getString("description"));
-        book.setGenre("genre");
+        book.setGenre(results.getString("genre"));
 
         return book;
     }

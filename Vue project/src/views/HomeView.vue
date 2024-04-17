@@ -45,7 +45,6 @@ created() {
 }
 
 #welcome-msg>h1 {
-    text-align: center;
     margin-left: 75px;
 }
 

@@ -26,7 +26,7 @@
     
 }
 
-main {
+/* main {
     grid-area: main;
     position: fixed;
     inset: 0px;
@@ -35,5 +35,5 @@ main {
     max-width: 100vw;
     max-height: 100dvh;
     margin: auto;
-}
+} */
 </style>
