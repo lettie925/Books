@@ -4,10 +4,7 @@ import com.bookappproject.bookapp.dao.ReaderDao;
 import com.bookappproject.bookapp.exception.DaoException;
 import com.bookappproject.bookapp.model.Reader;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
@@ -26,6 +23,15 @@ public class ReaderController {
     public List<Reader> getList() {
         try {
             return readerDao.getReaders();
+        } catch (DaoException e) {
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "DAO error -" + e.getMessage());
+        }
+    }
+
+    @RequestMapping(path = "/{id}", method = RequestMethod.GET)
+    public Reader getReader(@PathVariable int id) {
+        try {
+            return readerDao.getReaderById(id);
         } catch (DaoException e) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "DAO error -" + e.getMessage());
         }

@@ -36,4 +36,8 @@
     max-height: 100dvh;
     margin: auto;
 } */
+
+main {
+    padding-left: 20px;
+}
 </style>

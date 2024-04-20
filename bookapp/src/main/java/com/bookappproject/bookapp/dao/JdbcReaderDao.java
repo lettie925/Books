@@ -42,7 +42,19 @@ public class JdbcReaderDao implements ReaderDao {
 
     @Override
     public Reader getReaderById(int readerId) {
-        return null;
+        Reader reader = new Reader();
+
+        String sql = "SELECT * from reader where reader_id = ?";
+
+        try {
+            SqlRowSet results = jdbcTemplate.queryForRowSet(sql, readerId);
+            if (results.next()) {
+                reader = mapRowToReader(results);
+            }
+        } catch (CannotGetJdbcConnectionException e) {
+            throw new DaoException("Unable to connect to server or database", e);
+        }
+        return reader;
     }
 
     @Override
