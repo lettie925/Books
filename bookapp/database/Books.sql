@@ -1,5 +1,3 @@
-
-
 DROP TABLE IF EXISTS books_ratings;
 DROP TABLE IF EXISTS books_reader;
 DROP TABLE IF EXISTS books;
@@ -79,7 +77,12 @@ INSERT INTO books_reader(reader_id, book_id, book_read, book_owned) VALUES
 (1, 7, TRUE, TRUE),
 (1, 8, TRUE, TRUE),
 (1, 9, TRUE, TRUE),
-(1, 14, TRUE, TRUE);
+(1, 14, TRUE, TRUE),
+(2, 3, TRUE, TRUE),
+(2, 4, TRUE, TRUE),
+(2, 5, TRUE, TRUE),
+(2, 6, TRUE, TRUE);
+
 
 INSERT INTO books_reader(reader_id, book_id, book_wtr, book_owned) VALUES
 (1, 10, TRUE, TRUE),

@@ -63,10 +63,18 @@ h2 {
 }
 
 #button-div {
-    margin-left: 40px;
+    margin-left: 60px;
 }
 
 #readers-book-list {
     margin-left: 40px;
+}
+
+#view-book-list {
+    border-radius: 10px;
+    color: black;
+    background-color: rgb(168, 207, 158);
+    border-color: rgb(79, 97, 75);
+    width: 100px;
 }
 </style>
