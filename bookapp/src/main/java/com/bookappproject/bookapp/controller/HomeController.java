@@ -1,2 +1,13 @@
-package com.bookappproject.bookapp.controller;public class HomeController {
+package com.bookappproject.bookapp.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HomeController {
+
+    @GetMapping
+    public String home() {
+        return "Hello, JWT!";
+    }
 }
